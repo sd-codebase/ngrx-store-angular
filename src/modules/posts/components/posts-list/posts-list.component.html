@@ -1,0 +1,13 @@
+<h1>Posts</h1>
+<section class="post-page-section">
+    <aside class="links">
+        <ng-container *ngIf="posts.length">
+            <a *ngFor="let post of posts" [routerLink]="['/posts', post.id]">
+                <span class="post-title" title="{{post.id}}. {{post.title}}">{{post.id}}. {{post.title}}</span>
+            </a>
+        </ng-container>
+    </aside>
+    <section>
+        <router-outlet></router-outlet>
+    </section>
+</section>
